@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3{
+            color: green;
+
+        }
+        button{
+            padding: 20px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is index page..</h1>
+    <h3 id = "Welcome">Welcome to chitkara</h3>
+    <button id = "submit">Exit</button>
+    
+</body>
+</html>
+<script>
+    // console.log("Hello")
+    var greet = document.getElementById("Welcome")
+    console.log(greet)
+    var btn = document.getElementById("submit")
+    btn.addEventListener("click",handleClick)
+    var flag = false
+    function handleClick(){
+        // alert("Button is Clicked")
+        flag=!flag
+        if(flag){
+            greet.innerText="Thanks for Visting"
+            greet.style.color="red"
+            btn.innerHTML="Welcome"
+
+        }
+        else{
+            greet.innerText="Welcome to Chitkara"
+            greet.style.color="green"
+            btn.innerHTML="Exit"
+
+        }
+        
+        
+    }
+    console.log(btn)
+
+</script>
