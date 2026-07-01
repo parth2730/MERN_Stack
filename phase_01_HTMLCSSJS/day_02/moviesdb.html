@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel ="stylesheet" href="moviesdb.css">
+    <link rel="stylesheet" href="moviesdb.css">
 </head>
+
 <body>
-    <div id = "container">
-        <div id = "formContainer">
+    <div id="container">
+        <div id="formContainer">
 
             <!-- form -->
             <div>
                 <label for="">Movie Image URL</label>
-                <input type = "text" placeholder="Enter image URL">
+                <input id="url" type="text" placeholder="Enter image URL">
             </div>
             <div>
                 <label for="">Movie Title</label>
-                <input type = "text" placeholder="Enter Title">
+                <input id="title" type="text" placeholder="Enter Title">
             </div>
             <div>
                 <label for="">Movie Rating</label>
-                <input type = "text" placeholder="Enter Rating">
+                <input id="rating" type="text" placeholder="Enter Rating">
             </div>
             <div>
-                <button>Submit</button>
+                <button id="Submit">Submit</button>
             </div>
 
         </div>
-        <div>
+        <div id="movieCards">
+            <!-- <div class = "card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3H7bPB-NeIJ9y02Rj6_U28jmwJ-6S1UrFLzjfIt3jjQ&s=10" alt="">
+                <p>Movie : Avtar</p>
+                <h3>Rating : 4</h3>
+            </div> -->
             <!-- movies cards -->
 
         </div>
 
     </div>
-    
+
 </body>
+
 </html>
+<script src="moviesdb.js">
+
+</script>
