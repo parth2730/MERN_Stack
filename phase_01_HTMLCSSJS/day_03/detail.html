@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form action = "">
+            <div>
+                <label for = " ">Name: </label>
+                <input type="text" id = "Name">
+            </div>
+            <div>
+                <label for = " ">Email: </label>
+                <input type="text" id = "Email">
+            </div>
+            <div>
+                <label for = " ">Age: </label>
+                <input type="number" id = "Age">
+            </div>
+            <div>
+                <button id = "Submit">Submit</button>
+            </div>
+        </form>
+        <div>
+            <h3>Students Data</h3>
+                <table border = "4">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "data">
+
+                    </tbody>
+                </table>
+
+           
+        </div>
+    </div>
+    
+</body>
+</html>
+<script>
+    var btn = document.getElementById("Submit")
+    btn.addEventListener("click",function(event){
+        event.preventDefault()
+        var Name = document.getElementById("Name")
+        var Email = document.getElementById("Email")
+        var Age = document.getElementById("Age")
+
+
+        var valueName = Name.value
+        var valueEmail = Email.value
+        var valueAge = Age.value
+
+        console.log(valueName)
+
+        var tbody = document.getElementById("data")
+
+        tbody.innerHTML+=`
+        <tr>
+                <td>${valueName}</td>
+                <td>${valueEmail}</td>
+                <td>${valueAge}</td>
+        </tr>
+        `
+        Name.value=""
+        Email.value=""
+        Age.value=""
+
+
+
+    })
+
+</script>
